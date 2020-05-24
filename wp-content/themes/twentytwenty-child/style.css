@@ -1,0 +1,75 @@
+/*
+ Theme Name:   Twenty Twenty Child
+ Template:     twentytwenty
+ Version:      1.0.0
+*/
+@import url('../twentytwenty/style.css');
+
+.post-inner{
+    position: relative;
+}
+
+.headerAd{
+    margin: auto;
+    max-width: 970px !important;
+    max-height: 250px !important;
+}
+
+/* Content ad */
+.banner{
+    max-width: 300px !important;
+}
+
+/* Side ad */
+.sideAd{
+    max-width: 300px !important;
+    max-height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Lazy Loading CSS */
+/* progressive image CSS */
+.progressive {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none;
+}
+
+.progressive img.preview {
+  filter: blur(2vw);
+  transform: scale(1.05);
+}
+
+.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  animation: progressiveReveal 0.5s ease-out;
+}
+
+@keyframes progressiveReveal {
+    0% { transform: scale(1.05); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 767.98px){
+    .headerAd{
+        display: none;
+    }
+
+    .sideAd{
+        display: none;
+    }
+}
